@@ -1,14 +1,18 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  color: #f1f3f8;
+  background: #02030b;
 }
 
 .navbar {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  background-color: #222;
+  background-color: rgba(236, 167, 167, 0.92);
   padding: 1rem;
+  position: relative;
+  z-index: 2;
 }
 
 .navbar a {
@@ -23,4 +27,62 @@ body {
 .navbar a:hover {
   background-color: #fff;
   color: #222;
+}
+
+.hero {
+  min-height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  background-image:
+    linear-gradient(rgba(3, 12, 30, 0.55), rgba(3, 12, 30, 0.55)),
+    url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #eef7ff;
+}
+
+.hero-content {
+  max-width: 720px;
+  z-index: 1;
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #a7d2ff;
+  font-size: 0.85rem;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.02;
+}
+
+.hero p {
+  margin: 1.5rem auto 2rem;
+  max-width: 34rem;
+  font-size: 1.05rem;
+  color: #d8e7ff;
+}
+
+.hero-button {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  padding: 0.95rem 1.8rem;
+  border-radius: 999px;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.hero-button:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.24);
 }
