@@ -7,10 +7,17 @@ body {
 
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   gap: 2rem;
   background-color: #222;
-  padding: 1rem;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
 }
 
 .nav-links {
@@ -88,4 +95,69 @@ body {
 .hero-button:hover {
   transform: translateY(-2px);
   background: rgba(255, 255, 255, 0.24);
+}
+
+.footer {
+  background-color: #0f1419;
+  border-top: 1px solid #333;
+  padding: 3rem 2rem 1rem;
+  color: #a8b2c1;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  color: #f1f3f8;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.footer-section h3 {
+  font-size: 1.5rem;
+}
+
+.footer-section h4 {
+  font-size: 1rem;
+}
+
+.footer-section p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  color: #a8b2c1;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 1.5rem;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.9rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
