@@ -15,9 +15,21 @@ body {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   font-size: 1.5rem;
   font-weight: 700;
   color: #fff;
+}
+
+.logo-icon {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo:hover .logo-icon {
+  transform: rotate(5deg);
+  filter: drop-shadow(0 0 8px #00d4ff);
 }
 
 .nav-links {
