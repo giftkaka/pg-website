@@ -36,6 +36,55 @@
     </div>
   </section>
 
+  <section class="slider-section">
+    <div class="slider-container">
+      <h2>Featured Projects</h2>
+      <div class="slider-wrapper">
+        <div class="slider">
+          <div class="slide">
+            <div class="slide-content">
+              <h3>E-Commerce Platform</h3>
+              <p>Revolutionized online retail with AI-driven personalization and seamless checkout experience.</p>
+              <span class="slide-tag">Strategy & Design</span>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-content">
+              <h3>SaaS Dashboard</h3>
+              <p>Built an intuitive analytics platform serving 50,000+ daily active users worldwide.</p>
+              <span class="slide-tag">Development</span>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-content">
+              <h3>Brand Transformation</h3>
+              <p>Complete visual identity redesign that increased brand engagement by 340%.</p>
+              <span class="slide-tag">Branding</span>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-content">
+              <h3>Mobile App Launch</h3>
+              <p>Cross-platform fitness app with 100K+ downloads in the first month.</p>
+              <span class="slide-tag">Mobile & Marketing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-controls">
+        <button class="slider-btn prev" id="prevBtn">❮</button>
+        <div class="slider-dots">
+          <span class="dot active" onclick="currentSlide(0)"></span>
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <button class="slider-btn next" id="nextBtn">❯</button>
+      </div>
+    </div>
+  </section>
+
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-section">
@@ -63,3 +112,36 @@
   </footer>
 </body>
 </html>
+
+<script>
+  let currentSlideIndex = 0;
+  const slider = document.querySelector('.slider');
+  const dots = document.querySelectorAll('.dot');
+  const totalSlides = dots.length;
+
+  function showSlide(n) {
+    currentSlideIndex = (n + totalSlides) % totalSlides;
+    slider.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+    
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[currentSlideIndex].classList.add('active');
+  }
+
+  function nextSlide() {
+    showSlide(currentSlideIndex + 1);
+  }
+
+  function prevSlide() {
+    showSlide(currentSlideIndex - 1);
+  }
+
+  function currentSlide(n) {
+    showSlide(n);
+  }
+
+  document.getElementById('nextBtn').addEventListener('click', nextSlide);
+  document.getElementById('prevBtn').addEventListener('click', prevSlide);
+
+  // Auto-advance every 5 seconds
+  setInterval(nextSlide, 5000);
+</script>
