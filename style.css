@@ -9,13 +9,16 @@ body {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  background-color: rgba(236, 167, 167, 0.92);
+  background-color: #222;
   padding: 1rem;
-  position: relative;
-  z-index: 2;
 }
 
-.navbar a {
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
@@ -24,7 +27,7 @@ body {
   border-radius: 0.5rem;
 }
 
-.navbar a:hover {
+.nav-links a:hover {
   background-color: #fff;
   color: #222;
 }
