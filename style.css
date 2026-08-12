@@ -1,6 +1,6 @@
 /* Cleaned stylesheet: green (#1bb152), black, and white palette */
 
-:root { --nav-height: 72px; }
+:root { --nav-height: 72px; --green: #1bb152; --green-light: #9fe23f; }
 
 body {
   margin: 0;
@@ -50,7 +50,7 @@ body {
   padding: 0.35rem 0.5rem;
 }
 
-.nav-center a:hover { color: #d6ff4e }
+.nav-center a:hover { color: var(--green); }
 
 .nav-right { display:flex; align-items:center; gap:0.85rem }
 
@@ -59,7 +59,7 @@ body {
 .loc-text { font-size:0.95rem }
 
 .cta {
-  background: linear-gradient(90deg,#d6ff4e 0%, #9fe23f 100%);
+  background: linear-gradient(90deg,var(--green) 0%, var(--green-light) 100%);
   color: #06140a;
   padding: 0.45rem 0.9rem;
   border-radius: 999px;
@@ -105,18 +105,18 @@ body {
 
 .nav-links a:hover {
   background-color: rgba(27,177,82,0.12);
-  color: #d6ff4e;
+  color: var(--green);
   transform: translateY(-2px);
 }
 
 /* Hover color for location text and any other nav inline items */
 .nav-right .location:hover .loc-text,
 .nav-inner a:hover {
-  color: #d6ff4e;
+  color: var(--green);
 }
 
 .nav-links a.cta {
-  background: #1bb152;
+  background: var(--green);
   color: #07120a;
   padding: 0.55rem 1rem;
   border-radius: 999px;
