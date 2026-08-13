@@ -38,29 +38,106 @@
       </div>
     </div>
   </nav>
-  <main style="max-width:900px;margin:3rem auto;padding:1rem;">
-    <h1>Services</h1>
-    <p>Placeholder Services page. Below are anchors for each service so links land on content.</p>
 
-    <section id="strategy">
-      <h2>Strategy</h2>
-      <p>Market research, growth roadmaps, product strategy, and prioritisation.</p>
+  <main class="services-page">
+    <header class="services-hero">
+      <div class="services-hero-inner">
+        <h1>Services</h1>
+        <p class="lead">End-to-end product, design, and marketing services that turn ideas into measurable outcomes.</p>
+        <a class="hero-cta" href="contact.html">Get a proposal</a>
+      </div>
+    </header>
+
+    <section class="offerings">
+      <div class="container">
+        <div class="offering">
+          <h3>Strategy</h3>
+          <p>Research, product roadmaps, funnel analysis, and growth experiments designed to validate and scale.</p>
+        </div>
+        <div class="offering">
+          <h3>Design</h3>
+          <p>Brand identity, UX/UI systems, and visual design focused on clarity and conversion.</p>
+        </div>
+        <div class="offering">
+          <h3>Marketing</h3>
+          <p>Performance channels, content systems, and creative campaigns that acquire and retain users.</p>
+        </div>
+        <div class="offering">
+          <h3>Development</h3>
+          <p>Robust engineering, APIs, and infrastructure to ship fast and stay reliable.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="design">
-      <h2>Design</h2>
-      <p>Brand systems, UI/UX design, and visual identity work.</p>
+    <section class="case-studies">
+      <div class="container">
+        <h2>Case studies</h2>
+        <p class="muted">Selected results from recent engagements.</p>
+
+        <div class="case-slider">
+          <div class="case-track">
+            <article class="case-card">
+              <h3>E-Commerce Personalization</h3>
+              <p>Increased conversion by 28% through AI-driven product recommendations and checkout improvements.</p>
+            </article>
+            <article class="case-card">
+              <h3>SaaS Growth</h3>
+              <p>Activated onboarding flows and analytics, increasing DAU by 42% within 3 months.</p>
+            </article>
+            <article class="case-card">
+              <h3>Brand Redesign</h3>
+              <p>Repositioned a B2B brand that led to a 3x increase in demo requests.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="case-controls">
+          <button id="casePrev" class="case-btn">❮</button>
+          <div class="case-dots">
+            <span class="case-dot active" data-i="0"></span>
+            <span class="case-dot" data-i="1"></span>
+            <span class="case-dot" data-i="2"></span>
+          </div>
+          <button id="caseNext" class="case-btn">❯</button>
+        </div>
+      </div>
     </section>
 
-    <section id="marketing">
-      <h2>Marketing</h2>
-      <p>Performance marketing, content strategy, campaign execution and growth experiments.</p>
+    <section class="testimonials">
+      <div class="container">
+        <h2>What clients say</h2>
+        <div class="test-grid">
+          <blockquote class="test">
+            "PG helped us rethink product strategy — the results were immediate."<footer>— Head of Product, Acme</footer>
+          </blockquote>
+          <blockquote class="test">
+            "Design and execution were top-tier. Our metrics improved across the funnel."<footer>— CEO, BrightCo</footer>
+          </blockquote>
+        </div>
+      </div>
     </section>
 
-    <section id="development">
-      <h2>Development</h2>
-      <p>Web and mobile development, infrastructure, and integrations to scale products safely.</p>
+    <section class="services-cta">
+      <div class="container">
+        <h3>Ready to start?</h3>
+        <p class="muted">Tell us about your project and we'll send a tailored proposal.</p>
+        <a class="hero-cta" href="contact.html">Contact us</a>
+      </div>
     </section>
   </main>
+
+  <script>
+    // Case studies slider
+    (function(){
+      const track = document.querySelector('.case-track');
+      const dots = document.querySelectorAll('.case-dot');
+      let i = 0; const total = dots.length || 1;
+      function show(n){ i = (n+total)%total; track.style.transform = `translateX(-${i*100}%)`; dots.forEach(d=>d.classList.remove('active')); dots[i] && dots[i].classList.add('active'); }
+      document.getElementById('caseNext')?.addEventListener('click', ()=>show(i+1));
+      document.getElementById('casePrev')?.addEventListener('click', ()=>show(i-1));
+      dots.forEach(d=>d.addEventListener('click', ()=>show(parseInt(d.getAttribute('data-i')))));
+      setInterval(()=>show(i+1),7000);
+    })();
+  </script>
 </body>
 </html>

@@ -378,6 +378,46 @@ body {
   .works { padding:2rem 1rem }
 }
 
+/* Services page specific styles */
+.services-page { color:#eaf4ea }
+.services-hero { padding:4rem 1.5rem; background: linear-gradient(90deg, rgba(3,12,30,0.8), rgba(3,12,30,0.95)); text-align:center }
+.services-hero-inner { max-width:980px; margin:0 auto }
+.services-hero h1 { font-size:2.6rem; margin:0 0 .5rem }
+.services-hero .lead { color:#d6e9dd; margin:0 0 1rem }
+.hero-cta { display:inline-block; background: linear-gradient(90deg,var(--green), var(--green-light)); color:#07120a; padding:0.8rem 1.2rem; border-radius:999px; text-decoration:none; font-weight:700 }
+
+.offerings .container { max-width:1100px; margin:0 auto; display:grid; grid-template-columns: repeat(4,1fr); gap:1rem; padding:2rem 1rem }
+.offering { background: rgba(255,255,255,0.02); padding:1.25rem; border-radius:8px; border:1px solid rgba(27,177,82,0.04) }
+.offering h3 { color:var(--green); margin-top:0 }
+.offering p { color:#d6e9dd }
+
+.case-studies .container { max-width:980px; margin:0 auto; padding:2rem 1rem }
+.case-slider { overflow:hidden; border-radius:10px; }
+.case-track { display:flex; transition:transform .45s ease }
+.case-card { min-width:100%; padding:1.25rem; background: rgba(27,177,82,0.03); border:1px solid rgba(27,177,82,0.06); border-radius:8px }
+.case-controls { display:flex; justify-content:center; align-items:center; gap:1rem; margin-top:1rem }
+.case-btn { background: rgba(27,177,82,0.06); border:1px solid rgba(27,177,82,0.12); color:var(--green); padding:0.45rem 0.7rem; border-radius:8px }
+.case-dots { display:flex; gap:0.6rem }
+.case-dot { width:10px; height:10px; border-radius:50%; background: rgba(27,177,82,0.18) }
+.case-dot.active { background:var(--green); box-shadow:0 0 10px rgba(27,177,82,0.2) }
+
+.testimonials { padding:2rem 1rem }
+.test-grid { display:grid; grid-template-columns: repeat(2,1fr); gap:1rem; max-width:980px; margin:0 auto }
+.test { background: rgba(255,255,255,0.02); padding:1.25rem; border-radius:8px; color:#d6e9dd }
+.test footer { margin-top:0.6rem; color:#97a09a; font-size:0.9rem }
+
+.services-cta { padding:2rem 1rem; text-align:center }
+
+@media (max-width:960px) {
+  .offerings .container { grid-template-columns: repeat(2,1fr) }
+  .test-grid { grid-template-columns: 1fr }
+}
+
+@media (max-width:620px) {
+  .offerings .container { grid-template-columns: 1fr }
+  .services-hero h1 { font-size:1.8rem }
+}
+
 
 .nav-toggle {
   display: none;
