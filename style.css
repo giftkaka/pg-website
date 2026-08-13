@@ -356,6 +356,28 @@ body {
   .services-grid { grid-template-columns: 1fr }
 }
 
+/* Works slider styles */
+.works { padding:3.5rem 1.5rem; background: linear-gradient(180deg, rgba(10,12,14,0.3), rgba(6,8,10,0.85)); color:#eaf4ea }
+.works-inner { max-width:1100px; margin:0 auto }
+.works-head { text-align:center; margin-bottom:1.25rem }
+.works-slider-wrapper { overflow:hidden; border-radius:12px; border:1px solid rgba(255,255,255,0.02); background: rgba(3,3,3,0.25); }
+.works-slider-track { display:flex; transition:transform 0.45s ease }
+.works-slide { min-width:100%; padding:2rem; display:flex; align-items:center; justify-content:center }
+.slide-card { max-width:780px; background: rgba(27,177,82,0.03); border:1px solid rgba(27,177,82,0.06); padding:1.4rem; border-radius:10px }
+.slide-card h3 { margin:0 0 .5rem; color:var(--green) }
+.slide-card p { margin:0; color:#d6e9dd }
+.works-controls { display:flex; justify-content:center; align-items:center; gap:1rem; margin-top:1rem }
+.works-btn { background: rgba(27,177,82,0.06); border:1px solid rgba(27,177,82,0.12); color:var(--green); width:44px; height:44px; border-radius:50%; cursor:pointer }
+.works-btn:hover { background: rgba(27,177,82,0.14) }
+.works-dots { display:flex; gap:0.6rem }
+.works-dot { width:12px; height:12px; border-radius:50%; background: rgba(27,177,82,0.18); border:1px solid rgba(27,177,82,0.25); cursor:pointer }
+.works-dot.active { background:var(--green); box-shadow:0 0 12px rgba(27,177,82,0.25); transform:scale(1.15) }
+
+@media (max-width:700px) {
+  .slide-card { padding:1rem }
+  .works { padding:2rem 1rem }
+}
+
 
 .nav-toggle {
   display: none;

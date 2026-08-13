@@ -48,6 +48,55 @@
     </div>
   </section>
   
+  <section class="works" id="works">
+    <div class="works-inner">
+      <div class="works-head">
+        <p class="eyebrow">FEATURED WORKS</p>
+        <h2>Selected projects and case studies</h2>
+      </div>
+
+      <div class="works-slider-wrapper">
+        <div class="works-slider-track">
+          <div class="works-slide">
+            <div class="slide-card">
+              <h3>E-Commerce Platform</h3>
+              <p>AI personalization and UX that boosted conversion rates.</p>
+            </div>
+          </div>
+          <div class="works-slide">
+            <div class="slide-card">
+              <h3>SaaS Dashboard</h3>
+              <p>Scalable analytics with a focus on retention and clarity.</p>
+            </div>
+          </div>
+          <div class="works-slide">
+            <div class="slide-card">
+              <h3>Brand Transformation</h3>
+              <p>Visual identity and messaging that increased engagement.</p>
+            </div>
+          </div>
+          <div class="works-slide">
+            <div class="slide-card">
+              <h3>Mobile App Launch</h3>
+              <p>Cross-platform app with a successful go-to-market strategy.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="works-controls">
+        <button class="works-btn works-prev" id="worksPrev">❮</button>
+        <div class="works-dots">
+          <span class="works-dot active" data-index="0"></span>
+          <span class="works-dot" data-index="1"></span>
+          <span class="works-dot" data-index="2"></span>
+          <span class="works-dot" data-index="3"></span>
+        </div>
+        <button class="works-btn works-next" id="worksNext">❯</button>
+      </div>
+    </div>
+  </section>
+
   <section class="about" id="about">
     <div class="about-inner">
       <div class="about-text">
@@ -216,36 +265,60 @@
   </footer>
 
   <script>
-    let currentSlideIndex = 0;
-    const slider = document.querySelector('.slider');
-    const dots = document.querySelectorAll('.dot');
-    const totalSlides = dots.length;
+    // Main featured slider (existing)
+    (function(){
+      let currentSlideIndex = 0;
+      const slider = document.querySelector('.slider');
+      const dots = document.querySelectorAll('.dot');
+      const totalSlides = dots.length || 0;
 
-    function showSlide(n) {
-      currentSlideIndex = (n + totalSlides) % totalSlides;
-      slider.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
-      
-      dots.forEach(dot => dot.classList.remove('active'));
-      dots[currentSlideIndex].classList.add('active');
-    }
+      function showSlide(n) {
+        if (!slider) return;
+        currentSlideIndex = (n + totalSlides) % totalSlides;
+        slider.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[currentSlideIndex] && dots[currentSlideIndex].classList.add('active');
+      }
 
-    function nextSlide() {
-      showSlide(currentSlideIndex + 1);
-    }
+      function nextSlide() { showSlide(currentSlideIndex + 1); }
+      function prevSlide() { showSlide(currentSlideIndex - 1); }
 
-    function prevSlide() {
-      showSlide(currentSlideIndex - 1);
-    }
+      document.getElementById('nextBtn')?.addEventListener('click', nextSlide);
+      document.getElementById('prevBtn')?.addEventListener('click', prevSlide);
+      setInterval(nextSlide, 5000);
+      // expose handler for inline dot onclick from HTML
+      window.currentSlide = showSlide;
+    })();
 
-    function currentSlide(n) {
-      showSlide(n);
-    }
+    // Works slider
+    (function(){
+      let workIndex = 0;
+      const track = document.querySelector('.works-slider-track');
+      const dots = document.querySelectorAll('.works-dot');
+      const total = dots.length || 0;
 
-    document.getElementById('nextBtn').addEventListener('click', nextSlide);
-    document.getElementById('prevBtn').addEventListener('click', prevSlide);
+      function showWorkSlide(n){
+        if(!track) return;
+        workIndex = (n + total) % total;
+        track.style.transform = `translateX(-${workIndex * 100}%)`;
+        dots.forEach(d => d.classList.remove('active'));
+        dots[workIndex] && dots[workIndex].classList.add('active');
+      }
 
-    // Auto-advance every 5 seconds
-    setInterval(nextSlide, 5000);
+      function nextWork(){ showWorkSlide(workIndex + 1); }
+      function prevWork(){ showWorkSlide(workIndex - 1); }
+
+      document.getElementById('worksNext')?.addEventListener('click', nextWork);
+      document.getElementById('worksPrev')?.addEventListener('click', prevWork);
+
+      dots.forEach(d => d.addEventListener('click', (e)=>{
+        const i = parseInt(d.getAttribute('data-index') || '0', 10);
+        showWorkSlide(i);
+      }));
+
+      // Auto-advance every 6s
+      setInterval(nextWork, 6000);
+    })();
   </script>
 
 </body>
