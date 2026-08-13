@@ -21,9 +21,10 @@
 
       <div class="nav-center">
         <a href="index.html">Home</a>
-        <a href="works.html">Works</a>
-        <a href="services.html">Services</a>
-        <a href="index.html#about">About</a>
+        <a href="#works">Works</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
       </div>
 
       <div class="nav-right">
@@ -58,27 +59,54 @@
       <div class="works-slider-wrapper">
         <div class="works-slider-track">
           <div class="works-slide">
-            <div class="slide-card">
-              <h3>E-Commerce Platform</h3>
-              <p>AI personalization and UX that boosted conversion rates.</p>
+            <div class="slide-card" data-title="E-Commerce Platform" data-desc="AI personalization and UX that boosted conversion rates." data-image="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1400&q=80">
+              <div class="slide-media">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=60" alt="E-Commerce project">
+                <div class="slide-overlay">
+                  <h3>E-Commerce Platform</h3>
+                  <p>AI personalization and UX that boosted conversion rates.</p>
+                  <button class="view-btn">View case</button>
+                </div>
+              </div>
             </div>
           </div>
+
           <div class="works-slide">
-            <div class="slide-card">
-              <h3>SaaS Dashboard</h3>
-              <p>Scalable analytics with a focus on retention and clarity.</p>
+            <div class="slide-card" data-title="SaaS Dashboard" data-desc="Scalable analytics with a focus on retention and clarity." data-image="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1400&q=80">
+              <div class="slide-media">
+                <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=60" alt="SaaS dashboard">
+                <div class="slide-overlay">
+                  <h3>SaaS Dashboard</h3>
+                  <p>Scalable analytics with a focus on retention and clarity.</p>
+                  <button class="view-btn">View case</button>
+                </div>
+              </div>
             </div>
           </div>
+
           <div class="works-slide">
-            <div class="slide-card">
-              <h3>Brand Transformation</h3>
-              <p>Visual identity and messaging that increased engagement.</p>
+            <div class="slide-card" data-title="Brand Transformation" data-desc="Visual identity and messaging that increased engagement." data-image="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=80">
+              <div class="slide-media">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=60" alt="Brand transformation">
+                <div class="slide-overlay">
+                  <h3>Brand Transformation</h3>
+                  <p>Visual identity and messaging that increased engagement.</p>
+                  <button class="view-btn">View case</button>
+                </div>
+              </div>
             </div>
           </div>
+
           <div class="works-slide">
-            <div class="slide-card">
-              <h3>Mobile App Launch</h3>
-              <p>Cross-platform app with a successful go-to-market strategy.</p>
+            <div class="slide-card" data-title="Mobile App Launch" data-desc="Cross-platform app with a successful go-to-market strategy." data-image="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1400&q=80">
+              <div class="slide-media">
+                <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1200&q=60" alt="Mobile app">
+                <div class="slide-overlay">
+                  <h3>Mobile App Launch</h3>
+                  <p>Cross-platform app with a successful go-to-market strategy.</p>
+                  <button class="view-btn">View case</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -158,6 +186,35 @@
     </div>
   </section>
 
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="contact-info">
+        <h2>Contact</h2>
+        <p class="muted">Reach out for a proposal, partnership, or general enquiries.</p>
+        <p><strong>Email:</strong> <a href="mailto:info@amzmarketer.com">info@amzmarketer.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+        <div class="contact-socials">
+          <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+      <div class="contact-form">
+        <form action="mailto:info@amzmarketer.com" method="post" enctype="text/plain">
+          <label>Name
+            <input type="text" name="name" required>
+          </label>
+          <label>Email
+            <input type="email" name="email" required>
+          </label>
+          <label>Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="hero-cta">Send message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <section class="slider-section">
     <div class="slider-container">
       <h2>Featured Projects</h2>
@@ -230,10 +287,10 @@
         <h4>Quick Links</h4>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="works.html">Works</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
 
@@ -264,62 +321,7 @@
     </div>
   </footer>
 
-  <script>
-    // Main featured slider (existing)
-    (function(){
-      let currentSlideIndex = 0;
-      const slider = document.querySelector('.slider');
-      const dots = document.querySelectorAll('.dot');
-      const totalSlides = dots.length || 0;
-
-      function showSlide(n) {
-        if (!slider) return;
-        currentSlideIndex = (n + totalSlides) % totalSlides;
-        slider.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
-        dots.forEach(dot => dot.classList.remove('active'));
-        dots[currentSlideIndex] && dots[currentSlideIndex].classList.add('active');
-      }
-
-      function nextSlide() { showSlide(currentSlideIndex + 1); }
-      function prevSlide() { showSlide(currentSlideIndex - 1); }
-
-      document.getElementById('nextBtn')?.addEventListener('click', nextSlide);
-      document.getElementById('prevBtn')?.addEventListener('click', prevSlide);
-      setInterval(nextSlide, 5000);
-      // expose handler for inline dot onclick from HTML
-      window.currentSlide = showSlide;
-    })();
-
-    // Works slider
-    (function(){
-      let workIndex = 0;
-      const track = document.querySelector('.works-slider-track');
-      const dots = document.querySelectorAll('.works-dot');
-      const total = dots.length || 0;
-
-      function showWorkSlide(n){
-        if(!track) return;
-        workIndex = (n + total) % total;
-        track.style.transform = `translateX(-${workIndex * 100}%)`;
-        dots.forEach(d => d.classList.remove('active'));
-        dots[workIndex] && dots[workIndex].classList.add('active');
-      }
-
-      function nextWork(){ showWorkSlide(workIndex + 1); }
-      function prevWork(){ showWorkSlide(workIndex - 1); }
-
-      document.getElementById('worksNext')?.addEventListener('click', nextWork);
-      document.getElementById('worksPrev')?.addEventListener('click', prevWork);
-
-      dots.forEach(d => d.addEventListener('click', (e)=>{
-        const i = parseInt(d.getAttribute('data-index') || '0', 10);
-        showWorkSlide(i);
-      }));
-
-      // Auto-advance every 6s
-      setInterval(nextWork, 6000);
-    })();
-  </script>
+  <script src="script.js"></script>
 
 </body>
 </html>
