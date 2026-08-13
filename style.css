@@ -337,6 +337,25 @@ body {
   .about-stats { width:100%; justify-content:space-between }
 }
 
+/* Services section */
+.services { padding:4rem 1.5rem; background: linear-gradient(180deg, rgba(6,8,10,0.4), rgba(6,8,10,0.85)); color:#eaf4ea }
+.services-inner { max-width:1100px; margin:0 auto }
+.services-head { text-align:center; max-width:780px; margin:0 auto 2rem }
+.services-grid { display:grid; grid-template-columns: repeat(4, 1fr); gap:1.25rem }
+.service-card { background: rgba(27,177,82,0.03); border:1px solid rgba(27,177,82,0.06); padding:1.25rem; border-radius:12px; min-height:160px; display:flex; flex-direction:column; justify-content:space-between }
+.service-card h3 { margin:0 0 0.5rem; color:var(--green) }
+.service-card p { margin:0 0 1rem; color:#d6e9dd; line-height:1.5 }
+.service-cta { align-self:flex-start; background: transparent; border: 1px solid rgba(27,177,82,0.14); color:var(--green); padding:0.45rem 0.75rem; border-radius:8px; text-decoration:none; font-weight:700 }
+.service-cta:hover { background:var(--green); color:#07120a }
+
+@media (max-width: 1100px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr) }
+}
+
+@media (max-width: 620px) {
+  .services-grid { grid-template-columns: 1fr }
+}
+
 
 .nav-toggle {
   display: none;
