@@ -100,8 +100,19 @@
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-section">
-        <h3>PG</h3>
-        <p>Premium Growth Solutions for Your Brand</p>
+        <div class="footer-brand">
+          <a href="#" aria-label="Premium Growth Home" class="footer-brand-link">
+            <svg width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-icon footer-logo-icon" aria-hidden="true">
+              <circle cx="20" cy="20" r="18" fill="none" stroke="#1bb152" stroke-width="2"/>
+              <text x="12" y="27" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff">P</text>
+              <text x="22" y="27" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1bb152">G</text>
+            </svg>
+          </a>
+          <div>
+            <h3>PG</h3>
+            <p class="muted">Premium Growth Solutions for Your Brand</p>
+          </div>
+        </div>
       </div>
       <div class="footer-section">
         <h4>Quick Links</h4>
@@ -122,38 +133,39 @@
       <p>&copy; 2026 PG. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    let currentSlideIndex = 0;
+    const slider = document.querySelector('.slider');
+    const dots = document.querySelectorAll('.dot');
+    const totalSlides = dots.length;
+
+    function showSlide(n) {
+      currentSlideIndex = (n + totalSlides) % totalSlides;
+      slider.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+      
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[currentSlideIndex].classList.add('active');
+    }
+
+    function nextSlide() {
+      showSlide(currentSlideIndex + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentSlideIndex - 1);
+    }
+
+    function currentSlide(n) {
+      showSlide(n);
+    }
+
+    document.getElementById('nextBtn').addEventListener('click', nextSlide);
+    document.getElementById('prevBtn').addEventListener('click', prevSlide);
+
+    // Auto-advance every 5 seconds
+    setInterval(nextSlide, 5000);
+  </script>
+
 </body>
 </html>
-
-<script>
-  let currentSlideIndex = 0;
-  const slider = document.querySelector('.slider');
-  const dots = document.querySelectorAll('.dot');
-  const totalSlides = dots.length;
-
-  function showSlide(n) {
-    currentSlideIndex = (n + totalSlides) % totalSlides;
-    slider.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
-    
-    dots.forEach(dot => dot.classList.remove('active'));
-    dots[currentSlideIndex].classList.add('active');
-  }
-
-  function nextSlide() {
-    showSlide(currentSlideIndex + 1);
-  }
-
-  function prevSlide() {
-    showSlide(currentSlideIndex - 1);
-  }
-
-  function currentSlide(n) {
-    showSlide(n);
-  }
-
-  document.getElementById('nextBtn').addEventListener('click', nextSlide);
-  document.getElementById('prevBtn').addEventListener('click', prevSlide);
-
-  // Auto-advance every 5 seconds
-  setInterval(nextSlide, 5000);
-</script>
