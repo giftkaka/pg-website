@@ -8,22 +8,35 @@
 </head>
 <body>
   <nav class="navbar">
-    <div class="logo">
-      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-icon">
-        <!-- Circle background -->
-        <circle cx="20" cy="20" r="18" fill="none" stroke="#00d4ff" stroke-width="2"/>
-        <!-- P letter -->
-        <text x="12" y="27" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#00d4ff">P</text>
-        <!-- G letter -->
-        <text x="22" y="27" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#00d4ff">G</text>
-      </svg>
-      
-    </div>
-    <div class="nav-links">
-      <a href="#">HOME</a>
-      <a href="#">ABOUT</a>
-      <a href="#">SERVICES</a>
-      <a href="#">CONTACT</a>
+    <div class="nav-inner">
+      <div class="logo">
+        <a href="index.html" aria-label="Premium Growth Home">
+          <svg width="44" height="44" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-icon">
+            <circle cx="20" cy="20" r="18" fill="none" stroke="#1bb152" stroke-width="2"/>
+            <text x="12" y="27" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff">P</text>
+            <text x="22" y="27" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1bb152">G</text>
+          </svg>
+        </a>
+      </div>
+
+      <div class="nav-center">
+        <a href="index.html">Home</a>
+        <a href="#works">Works</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="nav-right">
+        <div class="location" title="Location">
+          <svg class="loc-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 2C8.134 2 5 5.134 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.866-3.134-7-7-7z" fill="#cfff6e"/>
+            <circle cx="12" cy="9" r="2.5" fill="#06140a"/>
+          </svg>
+          <span class="loc-text">Nigeria</span>
+        </div>
+        <a class="cta" href="contact.html">Let's Chat <span class="cta-arrow">→</span></a>
+      </div>
     </div>
   </nav>
 
@@ -32,7 +45,173 @@
       <p class="eyebrow">FUTURE-FIRST AGENCY</p>
       <h1>Powering digital growth in an advanced tech city.</h1>
       <p>Strategy, design, and marketing built for modern brands that want to lead.</p>
-      <a class="hero-button" href="#">EXPLORE SERVICES</a>
+      <a class="hero-button" href="services.html">EXPLORE SERVICES</a>
+    </div>
+  </section>
+  
+  <section class="works" id="works">
+    <div class="works-inner">
+      <div class="works-head">
+        <p class="eyebrow">FEATURED WORKS</p>
+        <h2>Selected projects and case studies</h2>
+      </div>
+
+      <div class="works-slider-wrapper">
+        <div class="works-slider-track">
+          <div class="works-slide">
+            <div class="slide-card" data-title="E-Commerce Platform" data-desc="AI personalization and UX that boosted conversion rates." data-image="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1400&q=80">
+              <div class="slide-media">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=60" alt="E-Commerce project">
+                <div class="slide-overlay">
+                  <h3>E-Commerce Platform</h3>
+                  <p>AI personalization and UX that boosted conversion rates.</p>
+                  <button class="view-btn">View case</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="works-slide">
+            <div class="slide-card" data-title="SaaS Dashboard" data-desc="Scalable analytics with a focus on retention and clarity." data-image="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1400&q=80">
+              <div class="slide-media">
+                <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=60" alt="SaaS dashboard">
+                <div class="slide-overlay">
+                  <h3>SaaS Dashboard</h3>
+                  <p>Scalable analytics with a focus on retention and clarity.</p>
+                  <button class="view-btn">View case</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="works-slide">
+            <div class="slide-card" data-title="Brand Transformation" data-desc="Visual identity and messaging that increased engagement." data-image="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=80">
+              <div class="slide-media">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=60" alt="Brand transformation">
+                <div class="slide-overlay">
+                  <h3>Brand Transformation</h3>
+                  <p>Visual identity and messaging that increased engagement.</p>
+                  <button class="view-btn">View case</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="works-slide">
+            <div class="slide-card" data-title="Mobile App Launch" data-desc="Cross-platform app with a successful go-to-market strategy." data-image="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1400&q=80">
+              <div class="slide-media">
+                <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1200&q=60" alt="Mobile app">
+                <div class="slide-overlay">
+                  <h3>Mobile App Launch</h3>
+                  <p>Cross-platform app with a successful go-to-market strategy.</p>
+                  <button class="view-btn">View case</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="works-controls">
+        <button class="works-btn works-prev" id="worksPrev">❮</button>
+        <div class="works-dots">
+          <span class="works-dot active" data-index="0"></span>
+          <span class="works-dot" data-index="1"></span>
+          <span class="works-dot" data-index="2"></span>
+          <span class="works-dot" data-index="3"></span>
+        </div>
+        <button class="works-btn works-next" id="worksNext">❯</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-text">
+        <p class="eyebrow">ABOUT US</p>
+        <h2>We build growth systems for ambitious brands.</h2>
+        <p>PG combines product strategy, creative design, and performance marketing to help companies scale sustainably. We focus on measurable outcomes, long-term brand strength, and delightful user experiences.</p>
+        <a class="about-cta" href="contact.html">Work with us</a>
+      </div>
+      <div class="about-stats">
+        <div class="stat">
+          <strong>340%</strong>
+          <span>Average engagement lift</span>
+        </div>
+        <div class="stat">
+          <strong>100K+</strong>
+          <span>App downloads</span>
+        </div>
+        <div class="stat">
+          <strong>50k</strong>
+          <span>Daily active users</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="services-inner">
+      <div class="services-head">
+        <p class="eyebrow">WHAT WE DO</p>
+        <h2>Services that drive measurable growth</h2>
+        <p class="muted">We combine product thinking, design excellence, and marketing to move the needle.</p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card" id="strategy">
+          <h3>Strategy</h3>
+          <p>Market research, product strategy, and growth roadmaps to prioritise what actually moves business metrics.</p>
+          <a class="service-cta" href="services.html#strategy">Learn more →</a>
+        </article>
+
+        <article class="service-card" id="design">
+          <h3>Design</h3>
+          <p>Brand systems, UI/UX, and visual identity that create clarity and drive customer trust.</p>
+          <a class="service-cta" href="services.html#design">Learn more →</a>
+        </article>
+
+        <article class="service-card" id="marketing">
+          <h3>Marketing</h3>
+          <p>Performance marketing, content, and campaigns focused on acquisition and retention.</p>
+          <a class="service-cta" href="services.html#marketing">Learn more →</a>
+        </article>
+
+        <article class="service-card" id="development">
+          <h3>Development</h3>
+          <p>Product development, engineering, and integrations that scale reliably and securely.</p>
+          <a class="service-cta" href="services.html#development">Learn more →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="contact-info">
+        <h2>Contact</h2>
+        <p class="muted">Reach out for a proposal, partnership, or general enquiries.</p>
+        <p><strong>Email:</strong> <a href="mailto:info@amzmarketer.com">info@amzmarketer.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+        <div class="contact-socials">
+          <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+      <div class="contact-form">
+        <form action="mailto:info@amzmarketer.com" method="post" enctype="text/plain">
+          <label>Name
+            <input type="text" name="name" required>
+          </label>
+          <label>Email
+            <input type="email" name="email" required>
+          </label>
+          <label>Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="hero-cta">Send message</button>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -86,62 +265,63 @@
   </section>
 
   <footer class="footer">
+    <div class="footer-top-accent" aria-hidden="true"></div>
     <div class="footer-content">
-      <div class="footer-section">
-        <h3>PG</h3>
-        <p>Premium Growth Solutions for Your Brand</p>
+      <div class="footer-section footer-brand">
+        <div class="footer-brand">
+          <a href="index.html" aria-label="Premium Growth Home" class="footer-brand-link">
+            <svg width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-icon footer-logo-icon" aria-hidden="true">
+              <circle cx="20" cy="20" r="18" fill="none" stroke="#1bb152" stroke-width="2"/>
+              <text x="12" y="27" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff">P</text>
+              <text x="22" y="27" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1bb152">G</text>
+            </svg>
+          </a>
+          <div>
+            <h3>PG</h3>
+            <p class="muted">Premium Growth Solutions for Your Brand</p>
+          </div>
+        </div>
       </div>
+
       <div class="footer-section">
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
+
       <div class="footer-section">
-        <h4>Contact</h4>
-        <p>Email: info@amzmarketer.com</p>
-        <p>Phone: +1 (555) 123-4567</p>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#strategy">Strategy</a></li>
+          <li><a href="services.html#design">Design</a></li>
+          <li><a href="services.html#marketing">Marketing</a></li>
+          <li><a href="services.html#development">Development</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <p>Email: <a href="mailto:info@amzmarketer.com">info@amzmarketer.com</a></p>
+        <p>Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+        <div class="socials" aria-label="Social links">
+          <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
       </div>
     </div>
+
     <div class="footer-bottom">
-      <p>&copy; 2026 PG. All rights reserved.</p>
+      <p>&copy; 2026 PG. All rights reserved. <span class="sep">•</span> <a href="privacy.html">Privacy</a> <span class="sep">•</span> <a href="terms.html">Terms</a></p>
     </div>
   </footer>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
-
-<script>
-  let currentSlideIndex = 0;
-  const slider = document.querySelector('.slider');
-  const dots = document.querySelectorAll('.dot');
-  const totalSlides = dots.length;
-
-  function showSlide(n) {
-    currentSlideIndex = (n + totalSlides) % totalSlides;
-    slider.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
-    
-    dots.forEach(dot => dot.classList.remove('active'));
-    dots[currentSlideIndex].classList.add('active');
-  }
-
-  function nextSlide() {
-    showSlide(currentSlideIndex + 1);
-  }
-
-  function prevSlide() {
-    showSlide(currentSlideIndex - 1);
-  }
-
-  function currentSlide(n) {
-    showSlide(n);
-  }
-
-  document.getElementById('nextBtn').addEventListener('click', nextSlide);
-  document.getElementById('prevBtn').addEventListener('click', prevSlide);
-
-  // Auto-advance every 5 seconds
-  setInterval(nextSlide, 5000);
-</script>
