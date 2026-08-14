@@ -1,5 +1,4 @@
-/* Cleaned stylesheet: green (#1bb152), black, and white palette */
-
+/* ===== SECTION: ROOT VARIABLES & GLOBAL STYLES ===== */
 :root { --nav-height: 72px; --green: #1bb152; --green-light: #9fe23f; }
 
 body {
@@ -13,6 +12,7 @@ body {
 a { text-decoration: none; color: inherit }
 a:hover { text-decoration: none }
 
+/* ===== SECTION: NAVIGATION BAR STYLES ===== */
 .navbar {
   position: fixed;
   top: 0;
@@ -127,6 +127,7 @@ a:hover { text-decoration: none }
   border: 1px solid rgba(255,255,255,0.06);
 }
 
+/* ===== SECTION: HERO SECTION STYLES ===== */
 .hero {
   margin-top: var(--nav-height);
   min-height: calc(100vh - var(--nav-height));
@@ -186,6 +187,7 @@ a:hover { text-decoration: none }
   transform: translateY(-3px);
   box-shadow: 0 10px 30px rgba(27,177,82,0.18);
 }
+/* ===== SECTION: SLIDER / CAROUSEL STYLES ===== */
 
 .slider-section {
   background: linear-gradient(135deg, rgba(3,6,5,0.6) 0%, rgba(3,6,5,0.95) 100%);
@@ -280,6 +282,7 @@ a:hover { text-decoration: none }
 .dot { width:12px; height:12px; border-radius:50%; background: rgba(27,177,82,0.22); cursor:pointer; transition:all .25s ease; border:1px solid rgba(27,177,82,0.28) }
 .dot.active { background:#1bb152; box-shadow:0 0 10px rgba(27,177,82,0.35); transform:scale(1.25) }
 .dot:hover { background: rgba(27,177,82,0.45) }
+/* ===== SECTION: FOOTER STYLES ===== */
 
 .footer { background-color:#07080a; border-top:4px solid rgba(27,177,82,0.06); padding:2.5rem 1.5rem; color:#cfd6d1; box-shadow: inset 0 6px 40px rgba(27,177,82,0.02) }
 

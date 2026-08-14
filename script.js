@@ -1,4 +1,5 @@
-// Main featured slider (existing)
+// ===== SECTION: MAIN FEATURED SLIDER ===== 
+// Controls the main slider carousel with auto-advance functionality
 (function(){
   let currentSlideIndex = 0;
   const slider = document.querySelector('.slider');
@@ -23,7 +24,8 @@
   window.currentSlide = showSlide;
 })();
 
-// Works slider
+// ===== SECTION: WORKS SLIDER ===== 
+// Portfolio/works carousel with navigation and auto-advance
 (function(){
   let workIndex = 0;
   const track = document.querySelector('.works-slider-track');
@@ -53,7 +55,8 @@
   setInterval(nextWork, 6000);
 })();
 
-// Lightbox / modal for works
+// ===== SECTION: WORKS LIGHTBOX / MODAL ===== 
+// Handles opening and closing modal for detailed work/project views
 (function(){
   const viewButtons = document.querySelectorAll('.view-btn');
   const modalHtml = `
@@ -97,7 +100,8 @@
   modal.addEventListener('click', (e)=>{ if(e.target === modal) closeModal(); });
 })();
 
-// Case studies slider (services page)
+// ===== SECTION: CASE STUDIES SLIDER ===== 
+// Handles case studies carousel on services page with auto-rotation
 (function(){
   const track = document.querySelector('.case-track');
   const dots = document.querySelectorAll('.case-dot');
