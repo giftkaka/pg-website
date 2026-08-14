@@ -245,7 +245,8 @@ body {
 }
 
 .footer {
-  background-color: #0f1419;
+  background: #02030b;
+  background-color: ;
   border-top: 1px solid #333;
   padding: 3rem 2rem 1rem;
   color: #a8b2c1;
